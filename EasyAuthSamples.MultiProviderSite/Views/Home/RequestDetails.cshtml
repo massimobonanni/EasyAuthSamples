@@ -1,0 +1,45 @@
+﻿@model EasyAuthSamples.MultiProviderSite.Models.Home.RequestDetailsModel
+
+@{
+    ViewData["Title"] = "Request Details";
+}
+
+<h1>RequestDetails</h1>
+
+<div> 
+    <dl class="row">
+        @foreach (var item in Model.Headers)
+        {
+            <dt class="col-sm-2">
+                @item.Key
+            </dt>
+            <dd class="col-sm-10">
+                @item.Value
+            </dd>
+        }
+    </dl>
+</div>
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Value</th>
+          <th>Issuer</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach (var claim in Model.UserClaims)
+        {
+          <tr>
+            <td>@claim.Type</td>
+            <td>@claim.Value</td>
+            <td>@claim.Issuer</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+</div>
+<div>
+    <a asp-action="Index">Back to Home</a>
+</div>

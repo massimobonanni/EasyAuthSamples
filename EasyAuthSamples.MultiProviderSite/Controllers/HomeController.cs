@@ -1,4 +1,5 @@
-﻿using EasyAuthSamples.MultiProviderSite.Models;
+﻿using EasyAuthSamples.Common.Extensions;
+using EasyAuthSamples.MultiProviderSite.Models;
 using EasyAuthSamples.MultiProviderSite.Models.Home;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -23,6 +24,14 @@ namespace EasyAuthSamples.MultiProviderSite.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+        
+        public IActionResult RequestDetails()
+        {
+            var model = new RequestDetailsModel();
+            model.Headers = Request.GetHeaders();
+            model.UserClaims = this.User.GetClaims();
+            return View(model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

@@ -12,9 +12,17 @@
     }
     else
     {
-        <a href="/.auth/login/aad?post_login_redirect_uri=/Home/Index">Log in with Entra ID</a>
-        <a href="/.auth/login/google?post_login_redirect_uri=/Home/Index">Log in with Google</a>
-        <a href="/.auth/login/github?post_login_redirect_uri=/Home/Index">Log in with Github</a>
+        <div class="row">
+            <div class="col">
+                <a href="/.auth/login/aad?post_login_redirect_uri=/Home/Index"><img src="img/microsoft.svg" height="100"/><br/>Log in with Entra ID</a>
+            </div>
+            <div class="col">
+                <a href="/.auth/login/google?post_login_redirect_uri=/Home/Index"><img src="img/google.svg" height="100" /><br />Log in with Google</a>
+            </div>
+            <div class="col">
+                <a href="/.auth/login/github?post_login_redirect_uri=/Home/Index"><img src="img/github.svg" height="100" /><br />Log in with Github</a>
+            </div>
+        </div>
     }
     <p></p>
 </div>
