@@ -396,3 +396,9 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/EasyAuthSamples.MultiProviderSite/Properties/ServiceDependencies/EasyAuth-MultiProviderSite - Zip Deploy
+/EasyAuthSamples.MultiProviderSite/Properties/launchSettings.json
+/EasyAuthSamples.SimpleSite/Properties/ServiceDependencies/EasyAuth-SimpleSite - Web Deploy
+/EasyAuthSamples.SimpleSite/Properties/launchSettings.json
+/EasyAuthSamples.UserClaimsSite/Properties/ServiceDependencies/EasyAuth-UserClaimSite - Zip Deploy
+/EasyAuthSamples.UserClaimsSite/Properties/launchSettings.json
