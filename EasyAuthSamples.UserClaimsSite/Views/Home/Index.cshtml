@@ -1,0 +1,19 @@
+﻿@model EasyAuthSamples.UserClaimsSite.Models.Home.IndexModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @if (Model.IsAuthenticated)
+    {
+        <p class="lead">You are logged in as @Model.UserName</p>
+        <p><a href="/.auth/logout">Sign out</a></p>
+    }
+    else
+    {
+        <p class="lead">You are not logged in.</p>
+    }
+    <p></p>
+</div>

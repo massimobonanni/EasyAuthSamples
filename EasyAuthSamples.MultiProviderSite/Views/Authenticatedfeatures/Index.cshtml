@@ -1,0 +1,14 @@
+﻿@model EasyAuthSamples.MultiProviderSite.Models.AuthenticatedFeatures.IndexModel 
+@{
+    ViewData["Title"] = "Authorized Feature";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Authorized feature</h1>
+    @if (Model.IsAuthenticated)
+    {
+        <p class="lead">You are logged in as @Model.UserName</p>
+        <p><a href="/.auth/logout">Sign out</a></p>
+    }
+    <p></p>
+</div>

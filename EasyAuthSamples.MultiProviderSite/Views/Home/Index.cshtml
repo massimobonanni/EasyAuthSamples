@@ -1,0 +1,20 @@
+﻿@model EasyAuthSamples.MultiProviderSite.Models.Home.IndexModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    @if (Model.IsAuthenticated)
+    {
+        <p class="lead">You are logged in as @Model.UserName</p>
+        <p><a href="/.auth/logout">Sign out</a></p>
+    }
+    else
+    {
+        <a href="/.auth/login/aad?post_login_redirect_uri=/Home/Index">Log in with Entra ID</a>
+        <a href="/.auth/login/google?post_login_redirect_uri=/Home/Index">Log in with Google</a>
+        <a href="/.auth/login/github?post_login_redirect_uri=/Home/Index">Log in with Github</a>
+    }
+    <p></p>
+</div>
